@@ -7,7 +7,7 @@ load_dotenv()
 
 client = OpenAI(
     api_key=os.getenv("OPENAI_API_KEY"),
-    base_url="https://api.justwoker.icu/v1"
+    base_url=os.getenv("BASE_URL")
 )
 
 # tools = [
