@@ -1,0 +1,14 @@
+# Chatbot backend dependencies
+
+# Web framework + server
+fastapi
+uvicorn
+
+# LLM client + config
+openai
+python-dotenv
+
+# Google Calendar integration (OAuth + API)
+google-api-python-client
+google-auth
+google-auth-oauthlib

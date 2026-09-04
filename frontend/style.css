@@ -32,6 +32,55 @@ body {
     font-weight: bold;
 
     border-bottom: 1px solid #ddd;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-status {
+    font-size: 12px;
+    font-weight: normal;
+    color: #2e7d32;
+}
+
+.calendar-status.connected::before {
+    content: "\2022 ";
+    color: #2e7d32;
+}
+
+.connect-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    padding: 10px 20px;
+
+    background: #fff8e1;
+    border-bottom: 1px solid #ffe082;
+
+    font-size: 14px;
+}
+
+.connect-banner button {
+    padding: 8px 14px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1a73e8;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+.connect-banner button:hover {
+    background: #1666cc;
 }
 
 .messages {
