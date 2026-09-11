@@ -5,6 +5,9 @@ description = "A simple AI chatbot"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "fastapi>=0.141.1",
     "openai>=3.11.0",
+    "pydantic>=2.13.5",
     "python-dotenv>=1.2.3",
+    "uvicorn>=0.52.4",
 ]

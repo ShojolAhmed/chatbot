@@ -9,7 +9,7 @@ load_dotenv()
 
 API_KEY = os.getenv("OPENAI_API_KEY")
 BASE_URL = os.getenv("BASE_URL")
-MODEL = "claude-opus-4-8"
+MODEL = os.getenv("MODEL")
 
 client = OpenAI(
     api_key=API_KEY,
@@ -37,6 +37,9 @@ def chat(message: str) -> str:
         messages=messages,
     )
 
-    response = completion.choices[0].message.content
+    if not completion.choices:
+        raise RuntimeError("Model returned no choices")
+
+    response = completion.choices[0].message.content or ""
     add_message("assistant", response)
     return response

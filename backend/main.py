@@ -1,15 +1,7 @@
-from .chatbot import chat
+from fastapi import FastAPI
 
+from .api import router
 
-def main():
-    while True:
-        user_input = input("You: ")
-        if user_input in ("exit", "quit"):
-            break
+app = FastAPI()
 
-        response = chat(user_input)
-        print("Bot:", response)
-
-
-if __name__ == "__main__":
-    main()
+app.include_router(router)
